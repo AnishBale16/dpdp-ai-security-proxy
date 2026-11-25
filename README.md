@@ -1,2 +1,4 @@
-# dpdp-ai-security-proxy
-A lightweight, self-hosted AI security reverse proxy that redacts Indian PII (Aadhaar, PAN, phone numbers) and blocks prompt injections in real time to ensure DPDP Act and CERT-In compliance.
+A lightweight, self-hosted AI security reverse proxy for LLMs and AI agents. Acting as a middleman for external LLM APIs, it provides:
+• Real-time PII Redaction: Masks sensitive Indian data (Aadhaar, PAN, phone numbers).
+• Threat Protection: Blocks prompt-injection attacks before they reach the model.
+• Regulatory Compliance: Enforces governance controls aligned with India's DPDP Act and CERT-In guidelines.
