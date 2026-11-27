@@ -1,14 +1,13 @@
 from fastapi import FastAPI
+from app.schemas.request import AIRequest
 
-app = FastAPI(title="DPDP AI Security Proxy")
+app = FastAPI()
 
-@app.get("/")
-def home():
+@app.post("/api/v1/chat")
+def chat(request: AIRequest):
+
     return {
-        "status": "running",
-        "project": "DPDP AI Security Proxy"
+        "received_prompt": request.prompt,
+        "provider": request.provider,
+        "status": "received"
     }
-
-@app.get("/health")
-def health():
-    return {"health": "ok"}
